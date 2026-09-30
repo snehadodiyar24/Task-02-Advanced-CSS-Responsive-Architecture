@@ -1,0 +1,45 @@
+/* Mobile-first responsive architecture */
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero { padding-top: 4rem; padding-bottom: 4rem; }
+
+    .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .about-grid,
+    .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .container { width: min(100% - 1.5rem, var(--container)); }
+    .section { padding: 4rem 0; }
+
+    .nav-container { flex-wrap: wrap; padding: .8rem 0; }
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        padding-bottom: .2rem;
+    }
+
+    .nav-actions .theme-label,
+    .nav-actions .button-small { display: none; }
+
+    .project-grid,
+    .feature-grid,
+    .skills-grid,
+    .form-row { grid-template-columns: 1fr; }
+
+    .hero-actions .button { flex: 1 1 180px; }
+}
+
+@media (max-width: 430px) {
+    h1 { font-size: 2.35rem; }
+    .hero-card { padding: .65rem; }
+    pre { font-size: .75rem; }
+    .footer-container { align-items: flex-start; flex-direction: column; }
+}
